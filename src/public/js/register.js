@@ -1,9 +1,9 @@
-const login = document.querySelector("#login");
-
-login.addEventListener("click", () => {
-  const user = document.querySelector("#user").value;
+const login = document.querySelector("#form");
+login.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const user = document.querySelector("#username").value;
   if (user != "") {
-    document.cookie = `user=${user}`;
+    document.cookie = `username=${user}`;
     document.location.href = "/";
   } else {
     alert("Please enter a username");

@@ -1,7 +1,7 @@
 const express = require("express");
 const { createServer } = require("http");
-const path = require("path");
 const realTimeServer = require("./realTimeServer");
+const path = require("path");
 const cookieParser = require("cookie-parser");
 
 const app = express();
@@ -16,7 +16,7 @@ app.use(require("./routes"));
 app.use(express.static(path.join(__dirname, "public")));
 
 httpServer.listen(app.get("port"), () => {
-  console.log(`Server running on port ${app.get("port")}`);
+  console.log("La aplicación esta corriendo en el puerto ", app.get("port"));
 });
 
 realTimeServer(httpServer);

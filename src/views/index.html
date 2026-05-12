@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/register.css" />
+    <link rel="stylesheet" href="css/chat.css" />
     <title>ESPEChat</title>
   </head>
   <body>
@@ -12,67 +12,14 @@
       <h1>ESPEChat</h1>
     </header>
     <main>
-      <div id="all-messages">
-        <div class="message">
-          <div class="image-container">
-            <img src="/src/public/paulo.png" alt="" />
-            <div class="message-body">
-              <div class="user-info">
-                <span class="username">Pablo</span>
-                <span class="timestamp">10:00 AM</span>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Suscipit qui officia maiores? Maxime praesentium consequuntur,
-                  repellat totam quidem eveniet magni dolor. Tempora, totam
-                  libero inventore officia incidunt beatae quidem ratione.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="message">
-          <div class="image-container">
-            <img src="/src/public/paulo.png" alt="" />
-            <div class="message-body">
-              <div class="user-info">
-                <span class="username">Pablo</span>
-                <span class="timestamp">10:00 AM</span>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Suscipit qui officia maiores? Maxime praesentium consequuntur,
-                  repellat totam quidem eveniet magni dolor. Tempora, totam
-                  libero inventore officia incidunt beatae quidem ratione.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="message">
-          <div class="image-container">
-            <img src="/src/public/paulo.png" alt="" />
-            <div class="message-body">
-              <div class="user-info">
-                <span class="username">Pablo</span>
-                <span class="timestamp">10:00 AM</span>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Suscipit qui officia maiores? Maxime praesentium consequuntur,
-                  repellat totam quidem eveniet magni dolor. Tempora, totam
-                  libero inventore officia incidunt beatae quidem ratione.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="all-messages"></div>
+      <!-- NUEVA FEATURE: contenedor del indicador de "escribiendo..." -->
+      <div id="typing-indicator"></div>
       <div class="send-message">
-        <input type="text" id="message" />
-        <button type="button" id="send-message" class="btn secondary">
-          Enviar
-        </button>
+        <input type="text" id="message" placeholder="Escribe un mensaje..." />
+        <button id="send-message" class="btn secondary">Enviar</button>
       </div>
     </main>
-    <p>Bienvenido a ESPEChat, la aplicacion de chat en tiempo real</p>
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/script.js"></script>
   </body>
